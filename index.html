@@ -13,7 +13,20 @@
 </form>
 
 <script type="text/javascript">
-  var groceries
+  
+  var grocery = []
+  document.querySelector('#addgroceryForm').addEventlistener('submit', addGrocery)
+  function addGrocery (event) {
+    event.preventDefault()
+  
+  var groceryInput = document.queryselector('#gorceryInput')
+  groceries.push(groceryInput.value)
+  groceryInput.value = ''
+
+  console.log(groceries)
+
+  }
+  
 </script>
 
 </body>
