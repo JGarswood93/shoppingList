@@ -7,26 +7,27 @@
   <title>Document</title>
 </head>
 <body>
-<form id = "addGroceryForm" method = "post">
+<form id="addGroceryForm" method="post">
     <input id="groceryinput" type="text" placeholder="new grocery">
     <button type="submit">ADD</button>
 </form>
 
 <script type="text/javascript">
   
-  var grocery = []
-  document.querySelector('#addgroceryForm').addEventlistener('submit', addGrocery)
+  var groceries = []
+  console.log(document.querySelector('#addGroceryForm'))
+  document.querySelector('#addGroceryForm').addEventListener('submit', addGrocery)
   function addGrocery (event) {
     event.preventDefault()
   
-  var groceryInput = document.queryselector('#gorceryInput')
+  var groceryInput = document.querySelector('#groceryinput')
   groceries.push(groceryInput.value)
   groceryInput.value = ''
 
   console.log(groceries)
 
   }
-  
+
 </script>
 
 </body>
